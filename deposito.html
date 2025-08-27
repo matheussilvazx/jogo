@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Depósito</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <script src="../qrcode/qrcode.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Depósito</h1>
+        </header>
+
+        <section class="deposit-area">
+            <div class="qr-code">
+                <h2>Escaneie o QR Code para depósito</h2>
+                <div id="qrcode"></div>
+            </div>
+
+            <div class="deposit-info">
+                <p>Para depositar, basta escanear o QR Code acima com sua carteira.</p>
+                <p><strong>Endereço: </strong> 1A1zP1eP5QGefi2DMPTfTL5SLmv7DivfNa</p>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        const depositAddress = "1A1zP1eP5QGefi2DMPTfTL5SLmv7DivfNa"; // Endereço Bitcoin
+        QRCode.toCanvas(document.getElementById("qrcode"), depositAddress, function(error) {
+            if (error) console.error(error);
+            console.log("QR Code gerado!");
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo de Dados</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Dice Game</h1>
+        </header>
+
+        <section class="game-area">
+            <div class="prediction">
+                <p>Previsão:</p>
+                <h2 id="prediction">50</h2>
+            </div>
+
+            <div class="dice">
+                <p>Número da Sorte:</p>
+                <div id="random-number" class="number">00</div>
+            </div>
+
+            <div class="info">
+                <div class="multiplier">
+                    <p>Multiplicador:</p>
+                    <span id="multiplier">X2</span>
+                </div>
+
+                <div class="chance">
+                    <p>Chance de ganhar:</p>
+                    <span id="chance">50%</span>
+                </div>
+            </div>
+
+            <div class="bet-controls">
+                <button id="rollUnder" class="roll-button">ROLAR DEBAIXO</button>
+                <button id="rollOver" class="roll-button">ROLAR SOBRE</button>
+            </div>
+
+            <div class="bet-slider">
+                <label for="betAmount">Aposta: R$</label>
+                <input type="range" id="betAmount" min="1" max="100000" step="1" value="5">
+                <span id="betValue">R$ 1</span>
+            </div>
+
+            <button id="betButton" class="bet-button">Apostar</button>
+
+            <div id="result-message"></div>
+
+            <section class="links">
+                <p>Não tem conta? <a href="cadastro.html">Cadastre-se aqui</a></p>
+                <p>Deseja fazer um depósito? <a href="deposito.html">Clique aqui</a></p>
+            </section>
+        </section>
+    </div>
+
+    <script src="../js/script.js"></script>
+</body>
+</html>
